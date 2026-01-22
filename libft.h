@@ -9,6 +9,11 @@ int    ft_isdigit(int c);
 int    ft_isalnum(int c);
 int    ft_isascii(int c);
 int    ft_isprint(int c);
+int    ft_toupper(int c);
+int    ft_tolower(int c);
 int    ft_strlen(char *str);
+char    *ft_strchr(char *str, int c);
+void    *ft_memset(void *str, int c, size_t n);
+void    ft_bzero(void *str, size_t n);
 
-#endif //LIBFT_LIBFT_H
+#endif
