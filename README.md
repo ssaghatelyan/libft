@@ -6,18 +6,14 @@ libft is a custom C library that reimplements a selection of standard C library 
 To compile the library, run:
     make
     
-This will generate:
+This will generate: libft.a
 
-libft.a
+Clean
 
-🧹 Clean
-Remove object files:
-    make clean
+Remove object files: make clean
 
-Remove object files and the library:
-    make fclean
+Remove object files and the library: make fclean
     
-Rebuild everything:
-    make re
+Rebuild everything: make re
 
 This project was developed for educational purposes to improve understanding of the C programming language and standard library internals.
