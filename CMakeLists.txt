@@ -13,7 +13,14 @@ include_directories(${CMAKE_SOURCE_DIR})
 add_library(ft STATIC ${SRC}
         ft_atoi.c
         ft_memcpy.c
-        ft_memmove.c)
+        ft_memmove.c
+        ft_strlcpy.c
+        ft_strlcat.c
+        ft_strrchr.c
+        ft_memchr.c
+        ft_memcmp.c
+        ft_strnstr.c
+        ft_strdup.c)
 
 # Тестовый main
 add_executable(test_main main.c)
