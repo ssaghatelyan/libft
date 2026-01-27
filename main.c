@@ -4,7 +4,7 @@
 int main(void)
 {
     // ft_atoi
-    printf("ft_atoi(\"42\") = %d\n", ft_atoi("42"));
+    printf("ft_atoi(\"-42\") = %d\n", ft_atoi("-42"));
 
     // ft_bzero
     char bzero_buf[4] = "abc";
@@ -26,16 +26,16 @@ int main(void)
     // ft_isprint
     printf("ft_isprint(31) = %d\n", ft_isprint(31));
 
-    // // ft_memcpy
-    // char src[] = "Hi";
-    // char dst[3];
-    // ft_memcpy(dst, src, 3);
-    // printf("ft_memcpy: %s\n", dst);
-    //
-    // // ft_memmove
-    // char move_buf[6] = "12345";
-    // ft_memmove(move_buf + 1, move_buf, 4);
-    // printf("ft_memmove: %s\n", move_buf);
+    // ft_memcpy
+    char src[] = "Hi";
+    char dst[3];
+    ft_memcpy(dst, src, 3);
+    printf("ft_memcpy: %s\n", dst);
+
+    // ft_memmove
+    char move_buf[6] = "12345";
+    ft_memmove(move_buf + 1, move_buf, 4);
+    printf("ft_memmove: %s\n", move_buf);
 
     // ft_memset
     char set_buf[6];

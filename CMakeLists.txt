@@ -11,7 +11,9 @@ include_directories(${CMAKE_SOURCE_DIR})
 
 # Библиотека
 add_library(ft STATIC ${SRC}
-        ft_atoi.c)
+        ft_atoi.c
+        ft_memcpy.c
+        ft_memmove.c)
 
 # Тестовый main
 add_executable(test_main main.c)
