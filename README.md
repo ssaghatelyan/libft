@@ -31,4 +31,5 @@ This library helps understand C fundamentals, memory management, and function im
 |                      | `ft_memmove`            | Copies memory safely even if regions overlap          |
 |                      | `ft_memchr`             | Searches memory for a byte                            |
 |                      | `ft_memcmp`             | Compares two memory blocks                            |
+|                      | `ft_calloc`             | Allocates and zero-initializes memory                 |
 | Conversion           | `ft_atoi`               | Converts a string to an integer                       |
