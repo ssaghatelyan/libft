@@ -7,6 +7,7 @@ It reimplements a collection of standard C functions and adds useful utilities f
 This library helps understand C fundamentals, memory management, and function implementation from scratch.  
 
 ## Library Functions
+### Part 1
 
 | Category             | Function Name           | Description                                           |
 |----------------------|-------------------------|-------------------------------------------------------|
