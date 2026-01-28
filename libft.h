@@ -23,6 +23,7 @@ char    *ft_strchr(char *str, int c);
 char    *ft_strrchr(const char *s, int c);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char    *ft_strdup(const char *str);
+void	*ft_calloc(size_t num, size_t elsize);
 void    *ft_memset(void *str, int c, size_t n);
 void    *ft_memcpy(void *dst, void *src, size_t n);
 void    *ft_memmove(void *dst, const void *src, size_t n);
