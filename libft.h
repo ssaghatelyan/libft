@@ -6,7 +6,7 @@
 /*   By: ssaghate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:55:30 by ssaghate          #+#    #+#             */
-/*   Updated: 2026/01/28 14:02:37 by ssaghate         ###   ########.fr       */
+/*   Updated: 2026/01/29 17:53:28 by ssaghate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdio.h>
 # include <stddef.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -29,6 +35,7 @@ int		ft_strlen(const char *str);
 int		ft_atoi(char *str);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
+int		ft_lstsize(t_list *lst);
 size_t	ft_strlcpy(char *dst, const char *src, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *str, int c);
@@ -41,5 +48,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t num, size_t elsize);
 void	ft_bzero(void *str, size_t n);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
