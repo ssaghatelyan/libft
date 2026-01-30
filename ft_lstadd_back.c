@@ -1,10 +1,19 @@
-#incldue "libft.h"
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list	*tmp;
+
 	if (!lst || !new)
 		return ;
-	while (lst->next)
-		lst = lst->next;
-
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	tmp = *lst;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = new;
 }
+
