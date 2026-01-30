@@ -21,7 +21,11 @@ add_library(ft STATIC ${SRC}
         part_1/ft_memcmp.c
         part_1/ft_strnstr.c
         part_1/ft_strdup.c
-        part_1/ft_calloc.c)
+        part_1/ft_calloc.c
+        part_3/ft_lstnew.c
+        part_3/ft_lstclear.c
+        part_3/ft_lstiter.c
+        part_3/ft_lstmap.c)
 
 # Тестовый main
 add_executable(test_main main.c)
