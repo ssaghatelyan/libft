@@ -6,7 +6,7 @@
 /*   By: ssaghate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 18:05:01 by ssaghate          #+#    #+#             */
-/*   Updated: 2026/01/30 18:05:04 by ssaghate         ###   ########.fr       */
+/*   Updated: 2026/02/07 20:29:32 by ssaghate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (!f)
+		return ;
 	while (lst)
 	{
 		f(lst->content);

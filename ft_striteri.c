@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssaghate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 17:26:49 by ssaghate          #+#    #+#             */
-/*   Updated: 2026/02/07 20:26:39 by ssaghate         ###   ########.fr       */
+/*   Created: 2026/02/07 20:11:17 by ssaghate          #+#    #+#             */
+/*   Updated: 2026/02/07 20:11:42 by ssaghate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
+	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i])
+	{
+		f(i, &s[i]);
 		i++;
-	return (i);
+	}
 }
