@@ -6,7 +6,7 @@
 /*   By: ssaghate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 18:06:53 by ssaghate          #+#    #+#             */
-/*   Updated: 2026/01/30 18:08:37 by ssaghate         ###   ########.fr       */
+/*   Updated: 2026/02/11 19:43:04 by ssaghate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_node;
 	void	*new_content;
 
+	if (!f || !del)
+		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{

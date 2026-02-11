@@ -6,7 +6,7 @@
 /*   By: ssaghate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 17:42:11 by ssaghate          #+#    #+#             */
-/*   Updated: 2026/02/10 18:49:03 by ssaghate         ###   ########.fr       */
+/*   Updated: 2026/02/11 19:54:17 by ssaghate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,33 +53,47 @@ static void	free_split(char **arr, int j)
 	free(arr);
 }
 
-char	**ft_split(char const *s, char c)
+static int	fill_split(char **arr, const char *s, char c)
 {
-	char	**arr;
-	int		i;
-	int		j;
-	int		start;
+	int	i;
+	int	j;
+	int	start;
 
 	i = 0;
 	j = 0;
-	if (!s)
-		return (NULL);
-	arr = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!arr)
-	{
-		free_split(arr, j)
-		return (NULL);
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
 		if (!s[i])
 			break ;
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		arr[j++] = dup_words(s, start, i);
+		arr[j] = dup_words(s, start, i);
+		if (!arr[j])
+		{
+			free_split(arr, j);
+			return (0);
+		}
+		j++;
 	}
 	arr[j] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+
+	if (!s)
+		return (NULL);
+	arr = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!arr)
+		return (NULL);
+	if (!arr)
+		return (NULL);
+	if (!fill_split(arr, s, c))
+		return (NULL);
 	return (arr);
 }
