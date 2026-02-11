@@ -6,7 +6,7 @@
 /*   By: ssaghate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 17:42:11 by ssaghate          #+#    #+#             */
-/*   Updated: 2026/02/05 17:42:12 by ssaghate         ###   ########.fr       */
+/*   Updated: 2026/02/10 18:49:03 by ssaghate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,13 @@ static char	*dup_words(const char *str, int start, int end)
 	return (word);
 }
 
+static void	free_split(char **arr, int j)
+{
+	while (j-- > 0)
+		free(arr[j]);
+	free(arr);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
@@ -59,6 +66,8 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	arr = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!arr)
+	{
+		free_split(arr, j)
 		return (NULL);
 	while (s[i])
 	{
